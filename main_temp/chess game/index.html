@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chess Teaching Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Heading for the game -->
+    <header>
+        <h1>Learn and Play Chess</h1>
+    </header>
+
+    <!-- Main container for the chessboard and buttons -->
+    <div class="main-container">
+        <!-- Chessboard with pieces -->
+        <div class="chess-container">
+            <div class="chess-board">
+                <!-- Row 1: Black Pieces -->
+                <div class="black-square" data-piece="rook-black"></div>
+                <div class="white-square" data-piece="knight-black"></div>
+                <div class="black-square" data-piece="bishop-black"></div>
+                <div class="white-square" data-piece="queen-black"></div>
+                <div class="black-square" data-piece="king-black"></div>
+                <div class="white-square" data-piece="bishop-black"></div>
+                <div class="black-square" data-piece="knight-black"></div>
+                <div class="white-square" data-piece="rook-black"></div>
+
+                <!-- Row 2: Black Pawns -->
+                <div class="white-square" data-piece="pawn-black"></div>
+                <div class="black-square" data-piece="pawn-black"></div>
+                <div class="white-square" data-piece="pawn-black"></div>
+                <div class="black-square" data-piece="pawn-black"></div>
+                <div class="white-square" data-piece="pawn-black"></div>
+                <div class="black-square" data-piece="pawn-black"></div>
+                <div class="white-square" data-piece="pawn-black"></div>
+                <div class="black-square" data-piece="pawn-black"></div>
+
+                <!-- Row 3 to 6: Empty Squares -->
+                <!-- Rows 3 to 6 will be empty initially, fill with white and black alternating squares -->
+                <!-- Repeat for 4 rows -->
+
+                <!-- Row 7: White Pawns -->
+                <div class="black-square" data-piece="pawn-white"></div>
+                <div class="white-square" data-piece="pawn-white"></div>
+                <div class="black-square" data-piece="pawn-white"></div>
+                <div class="white-square" data-piece="pawn-white"></div>
+                <div class="black-square" data-piece="pawn-white"></div>
+                <div class="white-square" data-piece="pawn-white"></div>
+                <div class="black-square" data-piece="pawn-white"></div>
+                <div class="white-square" data-piece="pawn-white"></div>
+
+                <!-- Row 8: White Pieces -->
+                <div class="white-square" data-piece="rook-white"></div>
+                <div class="black-square" data-piece="knight-white"></div>
+                <div class="white-square" data-piece="bishop-white"></div>
+                <div class="black-square" data-piece="queen-white"></div>
+                <div class="white-square" data-piece="king-white"></div>
+                <div class="black-square" data-piece="bishop-white"></div>
+                <div class="white-square" data-piece="knight-white"></div>
+                <div class="black-square" data-piece="rook-white"></div>
+            </div>
+        </div>
+
+        <!-- Buttons on the right -->
+        <div class="button-container">
+            <button onclick="startGame()">Start</button>
+            <button onclick="resetGame()">Reset</button>
+            <button onclick="undoMove()">Undo</button>
+            <button onclick="endGame()">End</button>
+        </div>
+    </div>
+
+    <!-- Suggestion buttons at the bottom -->
+    <div class="move-suggestions">
+        <button onclick="suggestMove()">Suggest Move</button>
+        <button onclick="reasonForLoss()">Reason for Losing</button>
+    </div>
+
+    <!-- Output area for feedback (reason for losing) -->
+    <div id="feedback" class="feedback-area"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
